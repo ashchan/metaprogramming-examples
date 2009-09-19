@@ -14,7 +14,11 @@ AnotherClass = Class.new do             # just as MyClass.new
   end
 end
 
-MyClass.new.walk
-AnotherClass.new.talk
+# MyClass.new.walk
+# AnotherClass.new.talk
 
-p Class.methods.grep /new/              # new is aclass method, not a keyword
+Class.methods.grep /new/                # new is aclass method, not a keyword
+
+obj = AnotherClass.new
+p obj.class
+p AnotherClass.class
