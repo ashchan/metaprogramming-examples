@@ -9,7 +9,7 @@ module Feature
       if_meth = opts.delete(:if)
       
       @features ||= {}
-      @features[name] = if_meth || lambda { true }
+      @features[name] = if_meth || lambda { |k| true }
     end
     
     def features
