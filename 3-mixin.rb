@@ -1,4 +1,4 @@
-module Feature
+module Ability
   def self.included(base)
     base.extend ClassMethods
     base.send(:include, InstanceMethods)
@@ -29,7 +29,7 @@ module Feature
 end
 
 class Person
-  include Feature
+  include Ability
   alias has? has_feature?
   
   attr_accessor :age
