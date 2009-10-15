@@ -34,3 +34,14 @@ def singleton.say_hello
 end
 
 singleton.say_hello
+
+def singleton.method_missing(name, *args, &block)
+  if name == :whoami
+    "a rubyist & solist"
+  else
+    super
+  end
+end
+
+p singleton.whoami
+p singleton.bang! #undefined method `bang!', from Kernel
